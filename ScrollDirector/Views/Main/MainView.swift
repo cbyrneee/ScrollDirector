@@ -14,7 +14,6 @@ struct MainView: View {
         Group {
             Text("This app will set the scroll direction to `normal` when a mouse is connected, and `natural` when disconnected.")
         }
-        .frame(width: 300, height: 100)
         .padding()
     }
 }

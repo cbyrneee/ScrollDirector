@@ -13,22 +13,46 @@ struct ScrollDirectorApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
-        WindowGroup {
-            MainView()
-        }
+        WindowGroup {}
     }
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     private let iokitThread = Thread(target: IOKitManager.shared, selector: #selector(IOKitManager.shared.listen), object: nil)
     
-    func applicationDidFinishLaunching(_ notification: Notification) {
-        iokitThread.start()
+    private var statusItem: NSStatusItem!
         
-        UNUserNotificationCenter.current()
-            .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-              print("Permission granted: \(granted)")
-            }
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+            print("Permission granted: \(granted)")
+        }
+    
+        self.setupMenu()
+        self.startIOKit()
+    }
+    
+    private func setupMenu() {
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        if let button = statusItem.button {
+            button.image = NSImage(systemSymbolName: "computermouse.fill", accessibilityDescription: "ScrollDirection")
+        }
+        
+        let mainView = NSHostingView(rootView: MainView())
+        mainView.frame = NSRect(x: 0, y: 0, width: 250, height: 100)
+        
+        let menuItem = NSMenuItem()
+        menuItem.view = mainView
+        
+        let menu = NSMenu()
+        menu.addItem(menuItem)
+        menu.addItem(.separator())
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        
+        statusItem.menu = menu
+    }
+    
+    private func startIOKit() {
+        iokitThread.start()
         
         IOKitManager.shared.onConnection = { device in
             switch device.type {
@@ -57,7 +81,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func notification(connected: Bool, direction: String) {
+    private func notification(connected: Bool, direction: String) {
         let content = UNMutableNotificationContent()
         content.title = "Mouse \(connected ? "connected" : "disconnected")"
         content.body = "Setting scrolling to \(direction)."
