@@ -13,7 +13,9 @@ struct ScrollDirectorApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
-        WindowGroup {}
+        Settings {
+            Text("Coming soon")
+        }
     }
 }
 
