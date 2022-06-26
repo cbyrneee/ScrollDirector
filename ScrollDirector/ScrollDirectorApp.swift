@@ -59,12 +59,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         IOKitManager.shared.onConnection = { device in
             switch device.type {
             case .mouse:
-                self.notification(connected: true, direction: "normal")
-                setSwipeScrollDirection(false)
+                self.setScrollDirection(wasConnected: true, direction: .normal)
                 break
             case .trackpad:
-                self.notification(connected: true, direction: "natural")
-                setSwipeScrollDirection(true)
+                self.setScrollDirection(wasConnected: true, direction: .natural)
                 break
             }
         }
@@ -72,23 +70,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         IOKitManager.shared.onDisconnection = { device in
             switch device.type {
             case .mouse:
-                self.notification(connected: false ,direction: "natural")
-                setSwipeScrollDirection(true)
+                self.setScrollDirection(wasConnected: false, direction: .natural)
                 break
             case .trackpad:
-                self.notification(connected: false, direction: "normal")
-                setSwipeScrollDirection(false)
+                self.setScrollDirection(wasConnected: false, direction: .normal)
                 break
             }
         }
     }
     
-    private func notification(connected: Bool, direction: String) {
+    private func notification(_ wasConnected: Bool, _ direction: ScrollDirection) {
         let content = UNMutableNotificationContent()
-        content.title = "Mouse \(connected ? "connected" : "disconnected")"
+        content.title = "Mouse \(wasConnected ? "connected" : "disconnected")"
         content.body = "Setting scrolling to \(direction)."
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
         UNUserNotificationCenter.current().add(request)
+    }
+    
+    private func setScrollDirection(wasConnected: Bool, direction: ScrollDirection) {
+        self.notification(wasConnected, direction)
+        setSwipeScrollDirection(direction == .natural)
     }
 }
