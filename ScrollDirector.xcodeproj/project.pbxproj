@@ -8,18 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		121C470F2868BD6900646ABA /* ScrollDirectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C470E2868BD6900646ABA /* ScrollDirectorApp.swift */; };
-		121C47112868BD6900646ABA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C47102868BD6900646ABA /* ContentView.swift */; };
 		121C47132868BD6A00646ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121C47122868BD6A00646ABA /* Assets.xcassets */; };
-		121C47162868BD6A00646ABA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121C47152868BD6A00646ABA /* Preview Assets.xcassets */; };
+		121C471F2868BD7F00646ABA /* IOKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C471E2868BD7F00646ABA /* IOKitManager.swift */; };
+		121C47232868C45F00646ABA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C47222868C45F00646ABA /* MainView.swift */; };
+		121C47252868C46500646ABA /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C47242868C46500646ABA /* MainViewViewModel.swift */; };
+		121C47272868C55300646ABA /* DeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C47262868C55300646ABA /* DeviceInformation.swift */; };
+		121C472D2868C6F900646ABA /* PreferencePanesSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121C472C2868C6F900646ABA /* PreferencePanesSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		121C470B2868BD6900646ABA /* ScrollDirector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollDirector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		121C470E2868BD6900646ABA /* ScrollDirectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDirectorApp.swift; sourceTree = "<group>"; };
-		121C47102868BD6900646ABA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		121C47122868BD6A00646ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		121C47152868BD6A00646ABA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		121C47172868BD6A00646ABA /* ScrollDirector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScrollDirector.entitlements; sourceTree = "<group>"; };
+		121C471E2868BD7F00646ABA /* IOKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOKitManager.swift; sourceTree = "<group>"; };
+		121C47222868C45F00646ABA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		121C47242868C46500646ABA /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
+		121C47262868C55300646ABA /* DeviceInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInformation.swift; sourceTree = "<group>"; };
+		121C472A2868C6C400646ABA /* ScrollDirector-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScrollDirector-Bridging-Header.h"; sourceTree = "<group>"; };
+		121C472C2868C6F900646ABA /* PreferencePanesSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanesSupport.framework; path = ../../../../../System/Library/PrivateFrameworks/PreferencePanesSupport.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121C472D2868C6F900646ABA /* PreferencePanesSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +46,7 @@
 			children = (
 				121C470D2868BD6900646ABA /* ScrollDirector */,
 				121C470C2868BD6900646ABA /* Products */,
+				121C472B2868C6F900646ABA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,21 +61,64 @@
 		121C470D2868BD6900646ABA /* ScrollDirector */ = {
 			isa = PBXGroup;
 			children = (
+				121C47292868C6AD00646ABA /* Bridging */,
+				121C47202868C45300646ABA /* Views */,
+				121C471D2868BD7200646ABA /* Core */,
 				121C470E2868BD6900646ABA /* ScrollDirectorApp.swift */,
-				121C47102868BD6900646ABA /* ContentView.swift */,
 				121C47122868BD6A00646ABA /* Assets.xcassets */,
 				121C47172868BD6A00646ABA /* ScrollDirector.entitlements */,
-				121C47142868BD6A00646ABA /* Preview Content */,
 			);
 			path = ScrollDirector;
 			sourceTree = "<group>";
 		};
-		121C47142868BD6A00646ABA /* Preview Content */ = {
+		121C471D2868BD7200646ABA /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				121C47152868BD6A00646ABA /* Preview Assets.xcassets */,
+				121C47282868C55800646ABA /* Model */,
+				121C471E2868BD7F00646ABA /* IOKitManager.swift */,
 			);
-			path = "Preview Content";
+			path = Core;
+			sourceTree = "<group>";
+		};
+		121C47202868C45300646ABA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				121C47212868C45700646ABA /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		121C47212868C45700646ABA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				121C47222868C45F00646ABA /* MainView.swift */,
+				121C47242868C46500646ABA /* MainViewViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		121C47282868C55800646ABA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				121C47262868C55300646ABA /* DeviceInformation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		121C47292868C6AD00646ABA /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				121C472A2868C6C400646ABA /* ScrollDirector-Bridging-Header.h */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
+		121C472B2868C6F900646ABA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				121C472C2868C6F900646ABA /* PreferencePanesSupport.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +179,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				121C47162868BD6A00646ABA /* Preview Assets.xcassets in Resources */,
 				121C47132868BD6A00646ABA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +190,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				121C47112868BD6900646ABA /* ContentView.swift in Sources */,
+				121C471F2868BD7F00646ABA /* IOKitManager.swift in Sources */,
+				121C47272868C55300646ABA /* DeviceInformation.swift in Sources */,
+				121C47232868C45F00646ABA /* MainView.swift in Sources */,
+				121C47252868C46500646ABA /* MainViewViewModel.swift in Sources */,
 				121C470F2868BD6900646ABA /* ScrollDirectorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +323,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ScrollDirector/Preview Content\"";
 				DEVELOPMENT_TEAM = 469MLTNL8A;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -283,7 +336,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.cbyrne.ScrollDirector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Bridging/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -296,7 +354,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ScrollDirector/Preview Content\"";
 				DEVELOPMENT_TEAM = 469MLTNL8A;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -310,7 +367,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.cbyrne.ScrollDirector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Bridging/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
