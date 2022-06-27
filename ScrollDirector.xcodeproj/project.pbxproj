@@ -16,6 +16,8 @@
 		121C47272868C55300646ABA /* DeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C47262868C55300646ABA /* DeviceInformation.swift */; };
 		121C472D2868C6F900646ABA /* PreferencePanesSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121C472C2868C6F900646ABA /* PreferencePanesSupport.framework */; };
 		12E6AABE2868D733003E982F /* ScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E6AABD2868D733003E982F /* ScrollDirection.swift */; };
+		AE8D7300EE2D3B23A3DA3234 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D70A07B43CD1C34F0360A /* NotificationManager.swift */; };
+		AE8D7F67E1C5BF79AF5E5B08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D791C63067D3023A4E7E9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		121C472C2868C6F900646ABA /* PreferencePanesSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanesSupport.framework; path = ../../../../../System/Library/PrivateFrameworks/PreferencePanesSupport.framework; sourceTree = "<group>"; };
 		121C47302868D15300646ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		12E6AABD2868D733003E982F /* ScrollDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDirection.swift; sourceTree = "<group>"; };
+		AE8D70A07B43CD1C34F0360A /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		AE8D791C63067D3023A4E7E9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 				121C470E2868BD6900646ABA /* ScrollDirectorApp.swift */,
 				121C47122868BD6A00646ABA /* Assets.xcassets */,
 				121C47172868BD6A00646ABA /* ScrollDirector.entitlements */,
+				AE8D791C63067D3023A4E7E9 /* AppDelegate.swift */,
 			);
 			path = ScrollDirector;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			children = (
 				121C47282868C55800646ABA /* Model */,
 				121C471E2868BD7F00646ABA /* IOKitManager.swift */,
+				AE8D70A07B43CD1C34F0360A /* NotificationManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -239,6 +245,8 @@
 				12E6AABE2868D733003E982F /* ScrollDirection.swift in Sources */,
 				121C47232868C45F00646ABA /* MainView.swift in Sources */,
 				121C470F2868BD6900646ABA /* ScrollDirectorApp.swift in Sources */,
+				AE8D7300EE2D3B23A3DA3234 /* NotificationManager.swift in Sources */,
+				AE8D7F67E1C5BF79AF5E5B08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
