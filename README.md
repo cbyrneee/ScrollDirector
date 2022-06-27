@@ -1,8 +1,12 @@
+![screenshot](.github/screenshot.png)
+
 # ScrollDirector
 
 A macOS application to toggle natural scrolling when a mouse is connected or disconnected.
 
-![screenshot](.github/screenshot.png)
+## Will this project ever be on the App Store?
+
+Unfortunately, no. We link against the `PreferencesPaneSupport` private framework, and Apple doesn't like people using private frameworks on the App Store.
 
 ## License
 
