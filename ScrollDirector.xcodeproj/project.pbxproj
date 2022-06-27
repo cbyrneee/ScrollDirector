@@ -13,7 +13,6 @@
 		121C47132868BD6A00646ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121C47122868BD6A00646ABA /* Assets.xcassets */; };
 		121C471F2868BD7F00646ABA /* IOKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C471E2868BD7F00646ABA /* IOKitManager.swift */; };
 		121C47232868C45F00646ABA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C47222868C45F00646ABA /* MainView.swift */; };
-		121C47252868C46500646ABA /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C47242868C46500646ABA /* MainViewViewModel.swift */; };
 		121C47272868C55300646ABA /* DeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C47262868C55300646ABA /* DeviceInformation.swift */; };
 		121C472D2868C6F900646ABA /* PreferencePanesSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121C472C2868C6F900646ABA /* PreferencePanesSupport.framework */; };
 		12E6AABE2868D733003E982F /* ScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E6AABD2868D733003E982F /* ScrollDirection.swift */; };
@@ -27,7 +26,6 @@
 		121C47172868BD6A00646ABA /* ScrollDirector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScrollDirector.entitlements; sourceTree = "<group>"; };
 		121C471E2868BD7F00646ABA /* IOKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOKitManager.swift; sourceTree = "<group>"; };
 		121C47222868C45F00646ABA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		121C47242868C46500646ABA /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		121C47262868C55300646ABA /* DeviceInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInformation.swift; sourceTree = "<group>"; };
 		121C472A2868C6C400646ABA /* ScrollDirector-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScrollDirector-Bridging-Header.h"; sourceTree = "<group>"; };
 		121C472C2868C6F900646ABA /* PreferencePanesSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanesSupport.framework; path = ../../../../../System/Library/PrivateFrameworks/PreferencePanesSupport.framework; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				121C47222868C45F00646ABA /* MainView.swift */,
-				121C47242868C46500646ABA /* MainViewViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -241,7 +238,6 @@
 				121C47272868C55300646ABA /* DeviceInformation.swift in Sources */,
 				12E6AABE2868D733003E982F /* ScrollDirection.swift in Sources */,
 				121C47232868C45F00646ABA /* MainView.swift in Sources */,
-				121C47252868C46500646ABA /* MainViewViewModel.swift in Sources */,
 				121C470F2868BD6900646ABA /* ScrollDirectorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject private var viewModel = MainViewViewModel()
-    
     var body: some View {
-        Group {
-            Text("This app will set the scroll direction to `normal` when a mouse is connected, and `natural` when disconnected.")
-        }
-        .padding()
+        Text("This app will set the scroll direction to `normal` when a mouse is connected, and `natural` when disconnected.")
+            .padding()
     }
 }
