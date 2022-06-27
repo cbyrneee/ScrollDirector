@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import LaunchAtLogin
 
 struct GeneralSettingsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Section {
+                LaunchAtLogin.Toggle()
                 Link("View project on GitHub", destination: URL(string: "https://github.com/cbyrneee/ScrollDirector")!)
             }
         }
