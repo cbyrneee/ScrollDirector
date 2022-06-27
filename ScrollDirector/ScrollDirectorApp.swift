@@ -14,7 +14,8 @@ struct ScrollDirectorApp: App {
     
     var body: some Scene {
         Settings {
-            Text("Coming soon")
+            SettingsView()
+                .frame(width: 350, height: 200)
         }
     }
 }
@@ -45,9 +46,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let menuItem = NSMenuItem()
         menuItem.view = mainView
         
+        let preferencesItem = NSMenuItem(title: "Preferences", action: #selector(showPreferences), keyEquivalent: ",")
+        preferencesItem.target = self
+        
         let menu = NSMenu()
         menu.addItem(menuItem)
         menu.addItem(.separator())
+        menu.addItem(preferencesItem)
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
         statusItem.menu = menu
@@ -91,5 +96,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func setScrollDirection(wasConnected: Bool, direction: ScrollDirection) {
         self.notification(wasConnected, direction)
         setSwipeScrollDirection(direction == .natural)
+    }
+    
+    @objc func showPreferences() {
+        // Ultimate hax to show the nice looking preferences window
+        NSApplication.shared.activate(ignoringOtherApps: true)
+        NSApplication.shared.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
+        
+        // Windows 11 reference
+        for window in NSApplication.shared.windows {
+            window.center()
+        }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120847922869DB9A00A1427D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120847912869DB9A00A1427D /* SettingsView.swift */; };
 		121C470F2868BD6900646ABA /* ScrollDirectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C470E2868BD6900646ABA /* ScrollDirectorApp.swift */; };
 		121C47132868BD6A00646ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121C47122868BD6A00646ABA /* Assets.xcassets */; };
 		121C471F2868BD7F00646ABA /* IOKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C471E2868BD7F00646ABA /* IOKitManager.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120847912869DB9A00A1427D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		121C470B2868BD6900646ABA /* ScrollDirector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollDirector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		121C470E2868BD6900646ABA /* ScrollDirectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDirectorApp.swift; sourceTree = "<group>"; };
 		121C47122868BD6A00646ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		120847902869DB9000A1427D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				120847912869DB9A00A1427D /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		121C47022868BD6900646ABA = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		121C47202868C45300646ABA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				120847902869DB9000A1427D /* Settings */,
 				121C47212868C45700646ABA /* Main */,
 			);
 			path = Views;
@@ -195,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120847922869DB9A00A1427D /* SettingsView.swift in Sources */,
 				121C471F2868BD7F00646ABA /* IOKitManager.swift in Sources */,
 				121C47272868C55300646ABA /* DeviceInformation.swift in Sources */,
 				12E6AABE2868D733003E982F /* ScrollDirection.swift in Sources */,
